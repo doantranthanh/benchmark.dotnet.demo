@@ -1,4 +1,5 @@
 ﻿using System;
+using BenchmarkDotNet.Running;
 
 namespace benchmark.demo
 {
@@ -6,7 +7,7 @@ namespace benchmark.demo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var summary = BenchmarkRunner.Run<Md5VsSha256>();
         }
     }
 }
